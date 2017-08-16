@@ -15,12 +15,12 @@ app.get('/Page-1', function(req,res) {
 
 
 app.get('/Page-2', function(req,res) {
-    res.send("Page Two will be here with not much traffic"); 
+    res.sendFile(path.join(__dirname, 'ui', 'Page-2.html')); 
 });
 
 
 app.get('/Page-3', function(req,res) {
-    res.send("Page Three will be here with not much traffic")
+    res.sendFile(path.join(__dirname, 'ui', 'Page-3.html'));
 });
 
 
