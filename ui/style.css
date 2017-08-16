@@ -4,11 +4,7 @@ body {
     margin-top: 75px;
 }
 
-.center {
-    text-align: center;
-}
-
-.text-big {
+.center { 
     font-size: 300%;
 }
 
@@ -20,3 +16,9 @@ body {
     height: 200px;
 }
 
+ .container{
+                max-width:800px;
+                margin:0 auto;
+                color:grey;
+                font-family:Chiller;
+ }    
