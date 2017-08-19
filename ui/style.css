@@ -20,7 +20,8 @@ body {
 
  .container{
                 max-width:600px;
-                
+                padding-left:600px;
+                padding-right:200px;
                 color:black;
                 font-family:Sans-serif;
  }    
