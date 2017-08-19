@@ -13,7 +13,8 @@ body {
 }
 
 .img-medium {
-    height: 150px;
+    height: 200px;
+    padding-right:100px;
 }
 
  .container{
