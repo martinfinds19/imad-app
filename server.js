@@ -6,7 +6,7 @@ var app = express();
 app.use(morgan('combined'));
 
 var Pages = {
-    'Page-one': {
+    'Page-1': {
      title: 'NOVEL',
      heading: 'Laws of sword and flush',
      date: 'August 16,2017',
@@ -26,7 +26,7 @@ var Pages = {
            </p>`    
           
 },
-  'Page-two':
+  'Page-2':
        {
       title: 'servers',
       heading: 'traffic',
@@ -37,7 +37,7 @@ var Pages = {
             </p>`
             
        },
-    'Page-three':
+    'Page-3':
          {
              title: 'Martin',
              heading: 'Mystery',
@@ -68,7 +68,7 @@ var htmlTemplate = `
     <div class="container">
         
 
-<h1 style= "color:blue;">Laws of sword and flush</h1>    
+<h1 style= "color:blue;">${heading}</h1>    
     
        <div>
           <a href="/">Home</a> 
@@ -94,12 +94,12 @@ app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
 
-app.get('/:PageName', function(req,res) {
-  // PageName == Page-1
-  // pages[PageName] == content object for Page-1
+app.get('/:PageNumber', function(req,res) {
+  // PageNumber == Page-1
+  // pages[PageNumber] == content object for Page-1
   
-    var PageName = req.params.PageName;    
-     res.send(createTemplate(Pages[PageName]));
+    var PageNumber = req.params.PageNumber;    
+     res.send(createTemplate(Pages[PageNumber]));
 });
 
 app.get('/ui/style.css', function (req, res) {
