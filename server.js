@@ -6,7 +6,7 @@ var app = express();
 app.use(morgan('combined'));
 
 var Pages = {
-    'page-one': {
+    'Page-one': {
      title: 'NOVEL',
      heading: 'Laws of sword and flush',
      date: 'August 16,2017',
@@ -26,7 +26,7 @@ var Pages = {
            </p>`    
           
 },
-  'page-Two':
+  'Page-Two':
        {
       title: 'servers',
       heading: 'traffic',
@@ -37,7 +37,7 @@ var Pages = {
             </p>`
             
        },
-    'page-three':
+    'Page-three':
          {
              title: 'Martin',
              heading: 'Mystery',
@@ -95,7 +95,8 @@ app.get('/', function (req, res) {
 });
 
 app.get('/:PageName', function(req,res) {
-
+  // PageName == Page-one
+  // pages[Pagename] == content object for Page-one
     var Pagename = req.params.PageName;    
      res.send(createTemplate(Pages[PageName]));
 });
