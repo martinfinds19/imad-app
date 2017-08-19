@@ -6,7 +6,7 @@ var app = express();
 app.use(morgan('combined'));
 
 var Pages = {
-    'Page-1': {
+    'Page-1':{
      title: 'NOVEL',
      heading: 'Laws of sword and flush',
      date: 'August 16,2017',
@@ -26,8 +26,7 @@ var Pages = {
            </p>`    
           
 },
-  'Page-2':
-       {
+    'Page-2':{
       title: 'servers',
       heading: 'traffic',
       date: 'Auggust 20,2017',
@@ -37,8 +36,7 @@ var Pages = {
             </p>`
             
        },
-    'Page-3':
-         {
+    'Page-3':{
              title: 'Martin',
              heading: 'Mystery',
              date: 'August 29,2017',
@@ -104,6 +102,10 @@ app.get('/:PageNumber', function(req,res) {
 
 app.get('/ui/style.css', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'style.css'));
+});
+
+app.get('/ui/main.js',   function (req,res){  
+    res.sendFile(path.join(__dirname, 'ui', 'main.js'));    
 });
 
 app.get('/ui/madi.png', function (req, res) {
