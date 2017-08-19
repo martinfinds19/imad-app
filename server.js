@@ -94,7 +94,7 @@ app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
 
-app.get('/PageName', function(req,res) {
+app.get('/:PageName', function(req,res) {
 
     var Pagename = req.params.PageName;    
      res.send(createTemplate(Pages[PageName]));
