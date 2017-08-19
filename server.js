@@ -99,7 +99,7 @@ app.get('/:PageName', function(req,res) {
   // pages[Pagename] == content object for Page-1
   
     var Pagename = req.params.PageName;    
-     res.send(createTemplate(Pages[PageName]));
+     res.send(createTemplate(Pages));
 });
 
 app.get('/ui/style.css', function (req, res) {
