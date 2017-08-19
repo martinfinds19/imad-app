@@ -94,12 +94,12 @@ app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
 
-app.get('/:PageName', function(req,res) {
-  // PageName == Page-1
-  // pages[Pagename] == content object for Page-1
+app.get('/:PageNumber', function(req,res) {
+  // PageNumber == Page-1
+  // pages[PageNumber] == content object for Page-1
   
-    var Pagename = req.params.PageName;    
-     res.send(createTemplate(Pages));
+    var PageNumber = req.params.PageNumber;    
+     res.send(createTemplate(Pages[PageNumber]));
 });
 
 app.get('/ui/style.css', function (req, res) {
