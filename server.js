@@ -5,10 +5,8 @@ var path = require('path');
 var app = express();
 app.use(morgan('combined'));
 
-
-
-
-var PageOne = {
+var Pages = {
+    'Page-one': {
      title: 'NOVEL',
      heading: 'Laws of sword and flush',
      date: 'August 16,2017',
@@ -27,7 +25,29 @@ var PageOne = {
                I think.
            </p>`    
           
-};
+},
+  'Page-Two':
+       {
+      title: 'servers',
+      heading: 'traffic',
+      date: 'Auggust 20,2017',
+      content: `
+            <p
+            >this is world
+            </p>`
+            
+       },
+    'Page-three':
+         {
+             title: 'Martin',
+             heading: 'Mystery',
+             date: 'August 29,2017',
+             content: `
+                <p>This is martin msytery agent 
+                    of "The cente" which is mystery 
+                     organization</p>`
+         }
+}; 
 function createTemplate (data) {
 
 var title = data.title;
@@ -70,27 +90,15 @@ var htmlTemplate = `
        return htmlTemplate;
 }       
  
-
-
-
 app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
 
-app.get('/PageOne', function(req,res) {
-     res.send(createTemplate(PageOne));
+app.get('/PageName', function(req,res) {
+
+    var Pagename = req.params.PageName;    
+     res.send(createTemplate(Pages[PageName]));
 });
-
-
-app.get('/Page-2', function(req,res) {
-    res.sendFile(path.join(__dirname, 'ui', 'Page-2.html')); 
-});
-
-
-app.get('/Page-3', function(req,res) {
-    res.sendFile(path.join(__dirname, 'ui', 'Page-3.html'));
-});
-
 
 app.get('/ui/style.css', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'style.css'));
