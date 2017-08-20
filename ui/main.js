@@ -38,7 +38,7 @@ button.onclick = function() {
           list == '<li>' + names[i] + '<li>';          
        }
        var ul = document.getElementById('nameList');
-       ul.innerHTML = List;
+       ul.innerHTML = list;
  };      
  
  
