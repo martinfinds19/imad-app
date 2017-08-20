@@ -1,9 +1,5 @@
 console.log('Loaded!');
 
-var element = document.getElementById('main-text');
-
-element.innerHTML = '';
-
 var img = document.getElementById('cage');
 var marginLeft = 0;
 function moveLeft () {
