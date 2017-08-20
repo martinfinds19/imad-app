@@ -26,7 +26,7 @@ button.onclick = function() {
 };
    
  var nameInput = document.getElementById('name');
- var name = nameInput.value;
+ var nam = nameInput.value;
  var submit = document.getElementById('submit_btn');
   
  submit.onclick = function() {
@@ -40,6 +40,9 @@ button.onclick = function() {
        var ul = document.getElementById('namelist');
        ul.innerHTML = list;
  };      
+ 
+ 
+ 
  
  
  
