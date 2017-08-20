@@ -5,9 +5,9 @@ var element = document.getElementById('main-text');
 element.innerHTML = 'New value';
 
 var img = document.getElementById('cage');
-var marginLeft = 0;
+var marginRight = 0;
 function moveRight () {
-    marginLeft = marginLeft + 5;
+    marginRight = marginRight + 5;
     img.style.marginRight = marginLeft + 'px';
     }
 
