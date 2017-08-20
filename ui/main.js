@@ -8,7 +8,7 @@ var img = document.getElementById('cage');
 var marginRight = 0;
 function moveRight () {
     marginRight = marginRight + 5;
-    img.style.marginRight = marginLeft + 'px';
+    img.style.marginRight = marginRight + 'px';
     }
 
 img.onclick = function() {
