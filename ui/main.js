@@ -25,8 +25,7 @@ button.onclick = function() {
 
 };
    
- var nameInput = document.getElementById('name');
- var ephitet = nameInput.value;
+ 
  var submit = document.getElementById('submit_btn');
   
  submit.onclick = function () {
@@ -49,6 +48,9 @@ button.onclick = function() {
     };
                      
     //Make request
+       
+ var nameInput = document.getElementById('name');
+ var ephitet = nameInput.value;
     request.open('GET', 'http://martinfinds19.imad.hasura-app.io/submit-name?name='  +name , true);
     request.send(null);
          
