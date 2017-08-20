@@ -5,10 +5,10 @@ var element = document.getElementById('main-text');
 element.innerHTML = 'New value';
 
 var img = document.getElementById('cage');
-var marginright = 0;
+var marginRight = 0;
 function moveRight () {
-    marginright = marginright + 5;
-    img.style.marginright = marginright + 'px';
+    marginRight = marginRight + 5;
+    img.style.marginRight = marginRight + 'px';
     }
 
 img.onclick = function() {
